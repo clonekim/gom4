@@ -14,7 +14,7 @@
    {:your_ip (:remote-addr request) })
 
 (defroutes app-routes       
-  (GET "/what-my-ip" request (response (myip request))
+  (GET "/what-my-ip" request (response (myip request)))
   (GET "/set/:value" [value]
     (assoc (redirect "/") :session {:value value}))
 
