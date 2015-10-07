@@ -12,10 +12,12 @@
             [bricks.routes.home :as home]))
 
 
-
 (defroutes app-routes
            (GET "/" [] (home/index))
-           (GET "/test" [] (home/test1))
+           (POST "/test" [color description]
+             (response
+                 {:id (home/save-canvas
+                        {:color color :description description})}))
            (route/not-found "Not Found"))
 
 (def app-routes

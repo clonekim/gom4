@@ -1,12 +1,13 @@
 (ns bricks.routes.home
   (:use ring.util.response)
   (:require
-    [bricks.models.mongo :as mongo]
+    [bricks.models.canvas :as canvas]
     [bricks.views.layout :refer :all]))
 
 
 (defn index []
   (base))
 
-(def test1 []
-  (mongo/insert-test))
+; id를 돌려줌
+(defn save-canvas [map]
+  (.toString (:_id (canvas/save-map map))))
