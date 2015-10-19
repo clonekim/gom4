@@ -9,16 +9,21 @@
             [ring.middleware.json :refer [wrap-json-response wrap-json-body wrap-json-params]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.anti-forgery :refer :all]
-            [bricks.routes.home :as home]))
+            [bricks.routes.router :as router]))
 
 
 (defroutes app-routes
-           (GET "/" [] (home/index))
+           (GET "/" [] (router/index))
+           (GET "/sign-in" [] (router/sign-in))
+           (GET "/sign-up" [] (router/sign-in))
+           (POST "/sign-in" [email password](router/sign-in-post email password))
+
            (POST "/test" [color description]
              (response
-                 {:id (home/save-canvas
+                 {:id (router/save-canvas
                         {:color color :description description})}))
-           (route/not-found "Not Found"))
+           (route/not-found "Not Found")
+           (route/resources "/"))
 
 (def app-routes
   (-> app-routes

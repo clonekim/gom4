@@ -8,3 +8,6 @@
 
 (defn save-map [canvas]
     (mc/insert-and-return @db "canvas" canvas))
+
+(defn login [email password]
+   (mc/find-one @db "accounts" {:email email :password password}))

@@ -6,13 +6,18 @@
 
 
 (defn index []
-  (template []))
+  (index-template))
 
 (defn sign-in []
   (signin-template))
 
-(defn sign-up []
+(defn sign-in-post [email password]
+  (println email)
+  (println password)
+  (signin-template)
+  ;(nil?  (canvas/login email password))
   )
+
 
 ; id를 돌려줌
 (defn save-canvas [map]
