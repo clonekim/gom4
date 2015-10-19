@@ -1,4 +1,4 @@
-(ns bricks.routes.home
+(ns bricks.routes.router
   (:use ring.util.response)
   (:require
     [bricks.models.canvas :as canvas]
@@ -6,7 +6,13 @@
 
 
 (defn index []
-  (base))
+  (template []))
+
+(defn sign-in []
+  (signin-template))
+
+(defn sign-up []
+  )
 
 ; id를 돌려줌
 (defn save-canvas [map]
