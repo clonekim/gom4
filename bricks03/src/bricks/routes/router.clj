@@ -1,23 +1,15 @@
 (ns bricks.routes.router
-  (:use ring.util.response)
+
+  (:use [ring.util.response]
+        [bricks.views.jade-config])
+
   (:require
     [bricks.models.canvas :as canvas]
-    [bricks.views.layout :refer :all]))
+    [clj-jade.core :as jade]))
 
 
 (defn index []
-  (index-template))
-
-(defn sign-in []
-  (signin-template))
-
-(defn sign-in-post [email password]
-  (println email)
-  (println password)
-  (signin-template)
-  ;(nil?  (canvas/login email password))
-  )
-
+  (jade/render "index.jade"))
 
 ; id를 돌려줌
 (defn save-canvas [map]

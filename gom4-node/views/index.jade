@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    title= Gom4
+    link(rel="stylesheet", href="css/bootstrap.css")
+    style.
+     .person { background-image: url(/img/person.png); width:224px; height:224px; }
+  body
+    div(class="container")
+     h1 Welcome to Gom4
+     div(class="row col-lg-10")
+       ul(class="nav nav-tabs")
+         li(class="active")
+            a(href="#home", data-toggle="tab") Gom4 란?
+         li
+            a(href="#developer", data-toggle="tab") 개발자소개
+       div(class="tab-content")
+         div(class="tab-pane active", id="home")
+           div(class="panel-body")
+             p Gom4는 혁신적인 개발자들과 함께합니다
+             
+             div(class="panel panel-default")
+               div(class="panel-body") 모던웹 프로그래밍
+                  ul
+                   li BootStrap, require.js, AMD
+                   li 웹소켓, SockJS, Vert.x, Node.js
+                   li Spring                   
+               div(class="panel-body") 어플리케이션
+                  ul
+                   li Air
+                   li JavaFX
+                   li MFC
+               div(class="panel-body") 게임
+                  ul
+                   li Flex
+                   li Html5 Canvas
+                
+
+         
+         div(class="tab-pane", id="developer")
+           div(class="panel-body")
+             div(class="row")
+               div(class="col-xs-6 col-sm-3")
+                 div
+                   img(class="person")
+                   div
+                     p 김대희
+                     p Java, Clojure, JavaScript, node.js
+               div(class="col-xs-6 col-sm-3")
+                 div
+                   img(class="person")
+                   div
+                     p 김의수
+                     p Java, Flex 전문가, 기획
+               div(class="col-xs-6 col-sm-3")
+                  div
+                     img(class="person")
+                     div
+                       p 김완중
+                       p Java, Flex 전문가
+               div(class="col-xs-6 col-sm-3")
+                  div
+                     img(class="person")                     
+                     div
+                       p 유민권
+                       p C++, MFC 전문가
+           
+    script(src="js/jquery-2.1.4.min.js")
+    script(src="js/bootstrap.min.js")
