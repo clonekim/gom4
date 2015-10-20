@@ -12,7 +12,9 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 **/node-modules
+node-modules
 **/*.iml
 **/*.iws
 **/.idea
+.idea
 
