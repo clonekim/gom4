@@ -17,4 +17,4 @@ node-modules
 **/*.iws
 **/.idea
 .idea
-
+.bin
