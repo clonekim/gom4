@@ -1,12 +1,15 @@
-(ns bricks.routes.home
-  (:use ring.util.response)
+(ns bricks.routes.router
+
+  (:use [ring.util.response]
+        [bricks.views.jade-config])
+
   (:require
     [bricks.models.canvas :as canvas]
-    [bricks.views.layout :refer :all]))
+    [clj-jade.core :as jade]))
 
 
 (defn index []
-  (base))
+  (jade/render "index.jade"))
 
 ; id를 돌려줌
 (defn save-canvas [map]
