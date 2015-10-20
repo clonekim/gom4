@@ -11,6 +11,10 @@
 (defn index []
   (jade/render "index.jade"))
 
+
+(defn sign-in []
+  (jade/render "signin.jade"))
+
 ; id를 돌려줌
 (defn save-canvas [map]
   (.toString (:_id (canvas/save-map map))))

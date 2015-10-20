@@ -5,5 +5,5 @@
 (println "jade !!!")
 
 (jade/configure {:template-dir "resources/public"
-                 :pretty-print true
+                 :pretty-print false
                  :cache? false})

@@ -2,7 +2,8 @@
 
   (:use
     ring.middleware.session
-    ring.util.response )
+    ring.util.response
+    bricks.models.canvas )
 
   (:require
    [ring.adapter.jetty :as ring]
@@ -18,10 +19,6 @@
 (defroutes app-routes
            (GET "/" [] (router/index))
            (GET "/sign-in" [] (router/sign-in))
-           (POST "/test" [color description]
-             (response
-                 {:id (router/save-canvas
-                        {:color color :description description})}))
            (route/not-found "Not Found"))
 
 (def app-routes
@@ -35,5 +32,7 @@
   (-> app-routes
       (wrap-defaults (assoc-in site-defaults [:security :anti-forgery] false))))
 
+
 (defn -main []
-  (ring/run-jetty #'app {:port 8080 :join? false}))
+   (connect "bricks-test")
+   (ring/run-jetty #'app {:port 8080 :join? false}))

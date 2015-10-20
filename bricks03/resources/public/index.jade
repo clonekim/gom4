@@ -2,5 +2,57 @@
 html
     head
         title= Brick
+        link(href="css/bootstrap.css", rel="stylesheet", type="text/css")
+        link(href="css/font-awesome.css", rel="stylesheet", type="text/css")
     body
-        h1 Hello
+        nav(class="navbar-default")
+            div(class="container")
+                div(class="nav navbar-right")
+                    a(href="#") 로그인 &nbsp;
+                    a(href="#") 회원가입 &nbsp;
+                    a(href="#") 쇼핑Q&A
+        nav(class="navbar")
+            div(class="container")
+                div(class="text-center")
+                    h1 Brick Brick
+        nav(class="navbar navbar-default")
+            div(class="container")
+                div(class="navbar-header")
+                    button(type="button", class="navbar-toggle", data-toggle="collapse", data-target="#menubar")
+                        i(class="fa fa-bars")
+                div(class="collapse navbar-collapse", id="menubar")
+                    ul(class="nav navbar-nav")
+                        li(class="dropdown")
+                            a(href="#", class="dropdown-toggle", data-toggle="dropdown") Brick Store
+                                span(class="caret")
+                            ul(class="dropdown-menu")
+                                li
+                                    a(href="#") Brick모자
+                                li
+                                    a(href="#") 악세사리
+                        li
+                            a(href="#") Community
+                        li
+                            a(href="#") Playground
+                        li
+                            a(href="#") BrickBrick
+                    ul(class="nav navbar-nav navbar-right")
+                        li
+                            a(href="#")
+                                i(class="fa fa-search")
+                        li
+                            a(href="#")
+                                i(class="fa fa-youtube-play")
+                        li
+                            a(href="#")
+                                i(class="fa fa-facebook")
+                        li
+                            a(href="#")
+                                i(class="fa fa-twitter")
+        div(class="container-fluid")
+            div(class="row")
+                div(class="col-xs-12 col-lg-12")
+                    img(src="img/screen01.jpg", class="img-responsive")
+
+        script(src="js/jquery-2.1.4.min.js")
+        script(src="js/bootstrap.min.js")
