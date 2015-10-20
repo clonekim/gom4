@@ -6,6 +6,7 @@
 
 `
 cd /home/ubuntu/gom4
+
 sudo bin/server.sh start
 `
 
