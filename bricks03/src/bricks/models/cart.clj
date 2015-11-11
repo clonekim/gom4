@@ -1,1 +1,2 @@
-(ns bricks.models.cart)
+(ns bricks.models.cart
+  (:use bricks.mongo))
